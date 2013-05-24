@@ -1,0 +1,13 @@
+process like this :
+
+mkdir data
+
+get the all json :
+    wget http://data.maplight.org/FEC/2014/summaries/all.json
+
+add in a new line for easy processing :
+    sed -e's!{"person_id":!\n{"person_id":!g' all.json  > all_split.json
+
+python process.py
+
+see in the data directory :
